@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bio Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    color: white;
+
+    background: linear-gradient(120deg, #141414, #1f1f1f, #2d2d2d, #1a1a1a);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.main-card {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.username {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 0.9em;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.15);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.button-row i {
+    font-size: 1em;
+}
+
+.button-row:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.tg-btn {
+    background: rgba(0, 136, 204, 0.4);
+}
+
+.tg-btn:hover {
+    background: rgba(0, 136, 204, 0.6);
+}
+
+.tgk-btn {
+    background: rgba(255, 165, 0, 0.4);
+}
+
+.tgk-btn:hover {
+    background: rgba(255, 165, 0, 0.6);
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="main-card">
+    <!-- Аватар и инфо -->
+    <div class="avatar-container">
+        <img src="https://github.com/reachingthestarsalone-a11y/BIO/blob/main/mbeech.jpg?raw=true" alt="Avatar" class="avatar-img">
+        <div class="info-container">
+            <div class="username">Wortex</div>
+            <div class="description">Начинающий программист из Санкт-Петербурга.</div>
+        </div>
+    </div>
+
+    <!-- Две горизонтальные кнопки/полоски -->
+    <div class="buttons-container">
+        <div class="button-row tg-btn" onclick="window.open('https://t.me/Cogciv','_blank')">
+            <i class="fab fa-telegram"></i>
+            <span>Личные сообщения</span>
+        </div>
+        <div class="button-row tgk-btn" onclick="window.open('https://t.me/+8vp_uWKrXR5hYzYy','_blank')">
+            <i class="fas fa-users"></i>
+            <span>Телеграм-канал</span>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const card = document.querySelector('.main-card');
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(-20px)';
+
+    setTimeout(() => {
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+    }, 100);
+});
+</script>
+
+</body>
+</html>
