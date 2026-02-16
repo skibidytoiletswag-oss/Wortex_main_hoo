@@ -1,0 +1,25 @@
+{
+  "name": "Wortex",
+  "description": "Начинающий программист из Санкт-Петербурга",
+  "location": "Санкт-Петербург",
+  "avatar": "https://i.pinimg.com/736x/46/3f/aa/463faa2ec83d149fc3bb54bf2d407dd7.jpg",
+  "telegram": {
+    "personal": "https://t.me/Cogciv",
+    "channel": "https://t.me/+8vp_uWKrXR5hYzYy",
+    "personal_username": "@Cogciv",
+    "channel_name": "Телеграм-канал"
+  },
+  "buttons": [
+    {
+      "title": "Личные сообщения",
+      "url": "https://t.me/Cogciv",
+      "icon": "telegram"
+    },
+    {
+      "title": "Телеграм-канал",
+      "url": "https://t.me/+8vp_uWKrXR5hYzYy",
+      "icon": "users"
+    }
+  ],
+  "status": "🛸 в поиске знаний"
+}
